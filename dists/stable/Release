@@ -1,0 +1,14 @@
+Origin: emailosint
+Label: emailosint
+Suite: stable
+Codename: stable
+Date: Wed, 12 Aug 2026 17:01:22 +0000
+Components: main
+Architectures: amd64
+Description: emailosint apt repository
+MD5Sum:
+ 3a0a36617d3696b5afbba615bfa87738              641 main/binary-amd64/Packages.gz
+ 56f3434e2fd10b8c68feaaf59c59dd5c              935 main/binary-amd64/Packages
+SHA256:
+ d63cc459fe849e195f72e6332f537ef0bad7440b213d8f9dcb2d98366c07847d              641 main/binary-amd64/Packages.gz
+ ad2c8d4f93883731fafb7890dadd8fb7e50ddf53a2b4f7922229f6ae705db0cf              935 main/binary-amd64/Packages

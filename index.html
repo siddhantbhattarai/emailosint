@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>emailosint · apt repository</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 760px; margin: 3rem auto; padding: 0 1.2rem; }
+  h1 { margin-bottom: .2rem; }
+  .sub { opacity: .7; margin-top: 0; }
+  pre { background: #1114; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+  code { font-family: ui-monospace, monospace; }
+  a { color: #3b82f6; }
+</style>
+</head>
+<body>
+  <h1>emailosint</h1>
+  <p class="sub">Fast email OSINT and 700+ site account enumeration. Signed apt repository.</p>
+
+  <h2>Install</h2>
+  <pre><code>sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://siddhantbhattarai.github.io/emailosint/pubkey.gpg \
+  | sudo tee /etc/apt/keyrings/emailosint.asc &gt; /dev/null
+
+echo "deb [signed-by=/etc/apt/keyrings/emailosint.asc] https://siddhantbhattarai.github.io/emailosint stable main" \
+  | sudo tee /etc/apt/sources.list.d/emailosint.list
+
+sudo apt update
+sudo apt install emailosint</code></pre>
+
+  <h2>Use</h2>
+  <pre><code>emailosint scan target@example.com
+emailosint username johndoe</code></pre>
+
+  <p>Source, releases and docs: <a href="https://github.com/siddhantbhattarai/emailosint">github.com/siddhantbhattarai/emailosint</a></p>
+</body>
+</html>
