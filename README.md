@@ -12,9 +12,7 @@ emailosint scan target@example.com
 
 ## Why it's different
 
-Most email-OSINT tools inherited holehe's weakness: they scrape ~120 sites,
-over half of which now silently fail, and they present ambiguous responses as
-hits. emailosint takes the opposite stance:
+emailosint is built for investigators who need to trust the output:
 
 - **Deterministic core first.** MX, SPF, DKIM, DMARC, DNSSEC, MTA-STS, BIMI,
   SMTP RCPT + catch-all, disposable/role/free classification, Gravatar, GitHub,
@@ -69,7 +67,7 @@ emailosint scan target@example.com --no-enum --verbose
 emailosint scan target@example.com -f json > report.json
 emailosint scan target@example.com -f csv  > report.csv
 
-# Username enumeration only (Sherlock-style)
+# Username enumeration only
 emailosint username johndoe
 
 # Restrict enumeration to categories, tune speed
