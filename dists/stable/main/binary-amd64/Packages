@@ -5,10 +5,10 @@ Maintainer: siddhantbhattarai <94698034+siddhantbhattarai@users.noreply.github.c
 Installed-Size: 6580
 Depends: libc6 (>= 2.34)
 Filename: pool/main/emailosint_1.0.0_amd64.deb
-Size: 2275660
-MD5sum: 2fcdb5a925610c401dd2b5312acd7f9d
-SHA1: 5e3e32eaa35c23d1e89e47255de7c09718869afe
-SHA256: 1c84e087ba88858b344e3f2f69bf6423310e3a24ad0d36c779dd63c660107502
+Size: 2275532
+MD5sum: 798243cdab8776d0c21f7373cd8ddeb8
+SHA1: 1613b1fd7fb0ddb7121e34ce0bc47ee6d3c5ccb5
+SHA256: 0b0d0b025fbcba4dcb1550220145b93a4746bc435b3afc36acb5976b6fcd99a0
 Section: net
 Priority: optional
 Homepage: https://github.com/siddhantbhattarai/emailosint
