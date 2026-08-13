@@ -5,29 +5,29 @@ Origin: traceosint
 Label: traceosint
 Suite: stable
 Codename: stable
-Date: Thu, 13 Aug 2026 14:53:19 +0000
+Date: Thu, 13 Aug 2026 16:01:15 +0000
 Components: main
 Architectures: amd64
 Description: traceosint apt repository
 MD5Sum:
- 0b21ab1c6fcf1e0135cc8246b29b3c65              641 main/binary-amd64/Packages.gz
- 13473347feb0863e7adcdfcdf0c8d66f              935 main/binary-amd64/Packages
+ 8665e014f91ad67e657f3c71a1feabe4              642 main/binary-amd64/Packages.gz
+ 3977036664a49afd9d23472f2df1859c              935 main/binary-amd64/Packages
 SHA256:
- e1fc72c9c7ba662fe0b279550fbe02e4c99883f30434c3d46d528e9a4090ff47              641 main/binary-amd64/Packages.gz
- 871d8cc2270f6bc1b98dab485d938936da846a3441e63b31b842b65fc05f96ad              935 main/binary-amd64/Packages
+ 4ed29681395852c21625893431d7a607d4ce4e418fb04a49005c415309d955d6              642 main/binary-amd64/Packages.gz
+ 17b794ef52755c23078067e41badf5195243120c4dbd0c5b15997acfe3fbbad8              935 main/binary-amd64/Packages
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEDiZ/I8nvmgCTkprjvgsoxV0kOuoFAmp92l8ACgkQvgsoxV0k
-OupMBw/+OL9ZbBO8pzRGBWIogqfG34J6ZQbw2M3wnaVwlT87crWXs2cABHuY8wuN
-CA11lKKNZbARQxwYyln3mLDP4diu9Cyc3LN3X/N0Ws2Im8hzcFZtMWJOltJi3XUo
-/qNlQ1a+tTLpnPIaO0/Ck5weGrizvadrC4m5B7Kfpyb3lP5id/tb/WghAsVIIRbk
-zgquHagKRYZBbyIIzdIUpXYCYVRvrsKczux4Y6OBWnc+/DmTe3cX7wmpIpkzOx/r
-mVzBY3vOqAMcw3k3I2lqUlLbY1g8aIqrtoSkA6wsw6HYr2nsoBZ9UE1D29F2M+x0
-V/OqTnP8GKnsRZveilgrQgZ5xg60AFErN/ns/dp3lyCj/3eXrXuEMgp+Il7HEkf9
-Fo2tXbpfhnRkTFj6XlFifGNQtBDbK4i5WX841PL8dRVC/JfjIa/qF6z5lt3CCqSr
-ZtBgTjAIObvQ0RqmFE4PAICLM6vT53bOb8rWDUe1IDWC+TjsGhyLey4zCYHe28qz
-6MKDcKuDQKzhNnA44nSSYfjNwHRzFjrq55K0rQCdUpYeM2msBMEx/lxV9FC7v/cz
-9g0AqJ7dMI7z+c4ud5D04e6m8tr3MF/r/xsxS3QzdDwpULHwv3eJ8XvHhQlJFBFT
-Kjhu9FBD3GKl8YWermYxhte9klsGPowbSZrBl65Heh02E+CW3Zw=
-=ndf7
+iQIzBAEBCgAdFiEEDiZ/I8nvmgCTkprjvgsoxV0kOuoFAmp96kwACgkQvgsoxV0k
+Our1Rg/9Gd08YnHgko7NEiDdc6LmDm/5JmDQnaZVztaYc88aA4jkQrn9Kl+1p7E0
+Cd69hgQLdS27pFWiYMVQ34iCXCjIuU07myA28GDFl+DQweqG1IIx2e+Tp32sDEcn
+u+UyZjrajeRvBo7/9wZnhJYoMAJTlAzCSMNZULV3oCf5ycBOahGKbCYZPkYAJzvT
+MEBOXILvDZyj0AGs07h0s14L8Ld/+eZqqdUtkPF04P+FD2vqmkKidPFkQePZBSvQ
+I9KhXfczoYOQNcy8SnAMeH5F/TMYoqTDqbhGIMhbqv/BhEyPVupziANf2ti9Z+aW
+aIHXysWnS13r56XbYnRrqhg56n+wkU8WEIiNipdg0Q9OwIKR24zPphl1OBtTTfTX
+AxoomPrrySn2eCtDgiwNgsvPECHOt90IjTxf/EIsI/1BrZwYbti/fFQsGSP2xwJN
++vHlXuSplzWYFjDMS6v8UL7dBTx09s1VAB9WLZZe9KSFvpLCu235gzzREYeFhRBc
+NzRa7u1HCQi0kbEZH3gkjtFHkHIul3TjOS69YVuFI0TBcqlXFhkKgZXvxJWQVmtl
+jPsFY3gYNVMEfNfpL4rrWpncDkBWW09Xl9XSKWteGoukfkraWF9L5QouelctG0zG
+npgtaLmyboyz4H3PSi64Pw5ZCuRBq4sYu250UTF44RLvUCj8z4E=
+=ns+h
 -----END PGP SIGNATURE-----

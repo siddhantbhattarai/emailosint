@@ -1,14 +1,14 @@
 Package: traceosint
-Version: 1.1.0
+Version: 1.1.1
 Architecture: amd64
 Maintainer: siddhantbhattarai <94698034+siddhantbhattarai@users.noreply.github.com>
-Installed-Size: 9736
+Installed-Size: 9764
 Depends: libc6 (>= 2.34)
-Filename: pool/main/traceosint_1.1.0_amd64.deb
-Size: 2932932
-MD5sum: e36416066306bd0a50cc02dd7475f57e
-SHA1: e04eeb420462d98c9b4b2e52d646e89ed2e34b33
-SHA256: 0871e701a3351f206ecbf0f525ce50e7694887954ba08a21ae8f8b4b9499514b
+Filename: pool/main/traceosint_1.1.1_amd64.deb
+Size: 2942098
+MD5sum: 6b036dbd0d703f8ac6c4251bba8ad908
+SHA1: 4434e5d858f77bc4820efef1bdbae44fc516e71b
+SHA256: 08808b4fd9a1e360186aadebf3f99d9e12ff0249e1d755e00d3c3a642462efdf
 Section: net
 Priority: optional
 Homepage: https://github.com/siddhantbhattarai/traceosint

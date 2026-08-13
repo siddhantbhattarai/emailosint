@@ -2,13 +2,13 @@ Origin: traceosint
 Label: traceosint
 Suite: stable
 Codename: stable
-Date: Thu, 13 Aug 2026 14:53:19 +0000
+Date: Thu, 13 Aug 2026 16:01:15 +0000
 Components: main
 Architectures: amd64
 Description: traceosint apt repository
 MD5Sum:
- 0b21ab1c6fcf1e0135cc8246b29b3c65              641 main/binary-amd64/Packages.gz
- 13473347feb0863e7adcdfcdf0c8d66f              935 main/binary-amd64/Packages
+ 8665e014f91ad67e657f3c71a1feabe4              642 main/binary-amd64/Packages.gz
+ 3977036664a49afd9d23472f2df1859c              935 main/binary-amd64/Packages
 SHA256:
- e1fc72c9c7ba662fe0b279550fbe02e4c99883f30434c3d46d528e9a4090ff47              641 main/binary-amd64/Packages.gz
- 871d8cc2270f6bc1b98dab485d938936da846a3441e63b31b842b65fc05f96ad              935 main/binary-amd64/Packages
+ 4ed29681395852c21625893431d7a607d4ce4e418fb04a49005c415309d955d6              642 main/binary-amd64/Packages.gz
+ 17b794ef52755c23078067e41badf5195243120c4dbd0c5b15997acfe3fbbad8              935 main/binary-amd64/Packages
