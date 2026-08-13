@@ -1,19 +1,19 @@
-Package: emailosint
-Version: 1.0.0
+Package: traceosint
+Version: 1.1.0
 Architecture: amd64
 Maintainer: siddhantbhattarai <94698034+siddhantbhattarai@users.noreply.github.com>
-Installed-Size: 6580
+Installed-Size: 9736
 Depends: libc6 (>= 2.34)
-Filename: pool/main/emailosint_1.0.0_amd64.deb
-Size: 2275532
-MD5sum: 798243cdab8776d0c21f7373cd8ddeb8
-SHA1: 1613b1fd7fb0ddb7121e34ce0bc47ee6d3c5ccb5
-SHA256: 0b0d0b025fbcba4dcb1550220145b93a4746bc435b3afc36acb5976b6fcd99a0
+Filename: pool/main/traceosint_1.1.0_amd64.deb
+Size: 2932932
+MD5sum: e36416066306bd0a50cc02dd7475f57e
+SHA1: e04eeb420462d98c9b4b2e52d646e89ed2e34b33
+SHA256: 0871e701a3351f206ecbf0f525ce50e7694887954ba08a21ae8f8b4b9499514b
 Section: net
 Priority: optional
-Homepage: https://github.com/siddhantbhattarai/emailosint
+Homepage: https://github.com/siddhantbhattarai/traceosint
 Description: Fast email OSINT and 700+ site account enumeration
- emailosint performs email-address reconnaissance: mail infrastructure
+ traceosint performs email-address reconnaissance: mail infrastructure
  (MX, SPF, DKIM, DMARC, DNSSEC, MTA-STS, BIMI), SMTP deliverability and
  catch-all probing, Gravatar, GitHub and breach-membership checks, RDAP and
  Certificate Transparency, plus account enumeration across 700+ websites.

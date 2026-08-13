@@ -3,36 +3,206 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>emailosint · apt repository</title>
+<title>traceosint · multi-vector OSINT</title>
+<meta name="description" content="traceosint — multi-vector identity reconnaissance for investigators: email, account-existence oracles, phone, and geo intelligence. Signed apt repository.">
 <style>
-  :root { color-scheme: light dark; }
-  body { font: 16px/1.6 system-ui, sans-serif; max-width: 760px; margin: 3rem auto; padding: 0 1.2rem; }
-  h1 { margin-bottom: .2rem; }
-  .sub { opacity: .7; margin-top: 0; }
-  pre { background: #1114; padding: 1rem; border-radius: 8px; overflow-x: auto; }
-  code { font-family: ui-monospace, monospace; }
-  a { color: #3b82f6; }
+  :root {
+    --bg: #0b0e14;
+    --panel: #121722;
+    --panel-2: #0f1420;
+    --border: #222b3a;
+    --text: #e6edf3;
+    --muted: #9aa7b8;
+    --accent: #4f8cff;
+    --accent-2: #22d3a6;
+    --code-bg: #0a0d14;
+    --shadow: 0 1px 0 rgba(255,255,255,.03), 0 12px 30px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f8fb; --panel: #ffffff; --panel-2: #f2f5f9; --border: #e2e8f0;
+      --text: #0f172a; --muted: #55637a; --accent: #2563eb; --accent-2: #0f9d78;
+      --code-bg: #0d1117; --shadow: 0 1px 2px rgba(16,24,40,.06), 0 12px 28px rgba(16,24,40,.08);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+  /* Hero */
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--border); }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted);
+    border: 1px solid var(--border); background: var(--panel); padding: 5px 11px; border-radius: 999px;
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 25%, transparent); }
+  h1 { font-size: clamp(38px, 7vw, 60px); letter-spacing: -.03em; margin: 20px 0 8px; }
+  h1 .accent { color: var(--accent); }
+  .tagline { font-size: clamp(17px, 2.6vw, 21px); color: var(--muted); margin: 0 0 26px; max-width: 640px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 10px;
+    font-weight: 600; font-size: 15px; border: 1px solid var(--border);
+  }
+  .btn-primary { background: var(--accent); color: #fff; border-color: transparent; }
+  .btn-primary:hover { text-decoration: none; filter: brightness(1.07); }
+  .btn-ghost { background: var(--panel); color: var(--text); }
+  .btn-ghost:hover { text-decoration: none; border-color: var(--accent); }
+
+  section { padding: 46px 0; border-bottom: 1px solid var(--border); }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin: 0 0 22px; font-weight: 700; }
+
+  /* Install */
+  pre {
+    background: var(--code-bg); color: #e6edf3; padding: 18px 20px; border-radius: 12px;
+    overflow-x: auto; border: 1px solid var(--border); box-shadow: var(--shadow); margin: 0;
+    font-size: 14px; line-height: 1.7;
+  }
+  pre .c { color: #6b7c93; }       /* comment */
+  pre .k { color: #79b8ff; }       /* command/keyword */
+  pre .s { color: #22d3a6; }       /* string-ish */
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+
+  /* Feature grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 20px;
+    box-shadow: var(--shadow);
+  }
+  .card h3 { margin: 0 0 6px; font-size: 16px; display: flex; align-items: center; gap: 9px; }
+  .card .ic { width: 26px; height: 26px; flex: none; color: var(--accent); }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+  /* Legend */
+  .legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .lg { display: flex; gap: 10px; align-items: baseline; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 13px; }
+  .lg b { font-family: ui-monospace, monospace; }
+  .lg .plus { color: var(--accent-2); } .lg .tilde { color: var(--accent); }
+  .lg .minus { color: var(--muted); } .lg .q { color: #e0a63c; }
+  .lg span { color: var(--muted); font-size: 14px; }
+
+  .callout { background: var(--panel-2); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 14px 16px; color: var(--muted); font-size: 14.5px; }
+  .callout + .callout { margin-top: 12px; border-left-color: var(--accent-2); }
+  .callout b { color: var(--text); }
+
+  footer { padding: 34px 0 60px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; }
+  footer a { color: var(--muted); }
 </style>
 </head>
 <body>
-  <h1>emailosint</h1>
-  <p class="sub">Fast email OSINT and 700+ site account enumeration. Signed apt repository.</p>
+  <header>
+    <div class="wrap">
+      <span class="badge"><span class="dot"></span> v1.1.0 · signed apt repository</span>
+      <h1><span class="accent">trace</span>osint</h1>
+      <p class="tagline">Multi-vector identity reconnaissance for investigators — email, online accounts, phone numbers and location artefacts, each result carrying an explicit confidence.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#install">Install via apt</a>
+        <a class="btn btn-ghost" href="https://github.com/siddhantbhattarai/traceosint">View on GitHub →</a>
+      </div>
+    </div>
+  </header>
 
-  <h2>Install</h2>
-  <pre><code>sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://siddhantbhattarai.github.io/emailosint/pubkey.gpg \
-  | sudo tee /etc/apt/keyrings/emailosint.asc &gt; /dev/null
+  <section id="install">
+    <div class="wrap">
+      <h2>Install — Debian / Ubuntu</h2>
+      <pre><code><span class="c"># add the signing key and repository</span>
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://siddhantbhattarai.github.io/traceosint/pubkey.gpg \
+  | sudo tee /etc/apt/keyrings/traceosint.asc &gt; /dev/null
 
-echo "deb [signed-by=/etc/apt/keyrings/emailosint.asc] https://siddhantbhattarai.github.io/emailosint stable main" \
-  | sudo tee /etc/apt/sources.list.d/emailosint.list
+echo <span class="s">"deb [signed-by=/etc/apt/keyrings/traceosint.asc] https://siddhantbhattarai.github.io/traceosint stable main"</span> \
+  | sudo tee /etc/apt/sources.list.d/traceosint.list
 
 sudo apt update
-sudo apt install emailosint</code></pre>
+sudo apt install traceosint</code></pre>
+      <p class="note">Updates then arrive through <code>apt upgrade</code> like any other package. The repository metadata is GPG-signed; apt verifies every download against the key above.</p>
+    </div>
+  </section>
 
-  <h2>Use</h2>
-  <pre><code>emailosint scan target@example.com
-emailosint username johndoe</code></pre>
+  <section>
+    <div class="wrap">
+      <h2>Capabilities</h2>
+      <div class="grid">
+        <div class="card">
+          <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> Mail infrastructure</h3>
+          <p>MX, SPF, DKIM, DMARC, DNSSEC, MTA-STS, BIMI, SMTP RCPT + catch-all, disposable/role/free classification.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg> Account-existence oracles</h3>
+          <p>Is this <em>email</em> on Facebook, Instagram, Twitter/X, Pinterest, GitHub or Bitbucket? Signup-validation technique — sends no mail to the target.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg> 700+ site enumeration</h3>
+          <p>WhatsMyName-driven, strict two-sided matching, 0% measured false-positive rate, honest coverage accounting.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg> Phone intelligence</h3>
+          <p>Validity, country + region, line type (mobile / fixed-line / VoIP …) and canonical E.164 / national formats.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg> Location intelligence</h3>
+          <p>IP geolocation with ISP/ASN and proxy/hosting flags; EXIF GPS + capture device and time from a shared photo.</p>
+        </div>
+        <div class="card">
+          <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg> Breach membership</h3>
+          <p>Have I Been Pwned <em>metadata</em> across ~1000 services — the strongest "where registered" signal, no raw dumps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p>Source, releases and docs: <a href="https://github.com/siddhantbhattarai/emailosint">github.com/siddhantbhattarai/emailosint</a></p>
+  <section>
+    <div class="wrap">
+      <h2>Use</h2>
+      <pre><code><span class="c"># email: infrastructure, identity, breaches, 700+ sites + account oracles</span>
+traceosint scan target@example.com
+
+<span class="c"># phone: validity, country/region, line type</span>
+traceosint phone +14155552671
+traceosint phone 9812345678 --region NP
+
+<span class="c"># IP geolocation and photo EXIF GPS</span>
+traceosint ip 203.0.113.9
+traceosint exif ./evidence/photo.jpg
+
+<span class="c"># machine-readable output for pipelines</span>
+traceosint scan target@example.com -f json &gt; report.json</code></pre>
+      <div style="height:22px"></div>
+      <h2>Confidence legend</h2>
+      <div class="legend">
+        <div class="lg"><b class="plus">[+]</b><span>confirmed — verified true</span></div>
+        <div class="lg"><b class="tilde">[~]</b><span>likely — strong signal, not proof</span></div>
+        <div class="lg"><b class="minus">[-]</b><span>absent — verified false</span></div>
+        <div class="lg"><b class="q">[?]</b><span>inconclusive — blocked/ambiguous, not evidence of absence</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Reliability &amp; ethics</h2>
+      <div class="callout">
+        <b>Reliability.</b> Account oracles are as accurate as the IP they run from. Meta and Pinterest rate-limit per egress IP — from a datacenter address those answer <code>inconclusive</code>, never a false negative. Route through a clean residential proxy with <code>TRACEOSINT_PROXY</code> for reliable Instagram/Facebook results.
+      </div>
+      <div class="callout">
+        <b>On location.</b> traceosint does not and cannot track a person's live location from an email or phone number — no lawful technique does. It provides location <em>intelligence</em> about artefacts you already lawfully hold (an IP, a photo's EXIF). For <b>authorised investigations only</b>; respect GDPR/CCPA and platform terms.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; justify-content:space-between; width:100%;">
+      <span>MIT-licensed · dataset CC BY-SA 4.0</span>
+      <span><a href="https://github.com/siddhantbhattarai/traceosint">github.com/siddhantbhattarai/traceosint</a> · <a href="pubkey.gpg">signing key</a></span>
+    </div>
+  </footer>
 </body>
 </html>

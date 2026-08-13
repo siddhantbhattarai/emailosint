@@ -1,33 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-Origin: emailosint
-Label: emailosint
+Origin: traceosint
+Label: traceosint
 Suite: stable
 Codename: stable
-Date: Wed, 12 Aug 2026 17:36:03 +0000
+Date: Thu, 13 Aug 2026 14:53:19 +0000
 Components: main
 Architectures: amd64
-Description: emailosint apt repository
+Description: traceosint apt repository
 MD5Sum:
- 96e52efed2d0a4ff8db2385c09aef764              638 main/binary-amd64/Packages.gz
- 4920f90ec9484434787fd08dd7316991              935 main/binary-amd64/Packages
+ 0b21ab1c6fcf1e0135cc8246b29b3c65              641 main/binary-amd64/Packages.gz
+ 13473347feb0863e7adcdfcdf0c8d66f              935 main/binary-amd64/Packages
 SHA256:
- 762c21fff2fc715f2f8a4189168a7fa2c49a2a2d0f08ec96761aed31721ef949              638 main/binary-amd64/Packages.gz
- 85998371eb482918219859f0af727a1da0688a38d204bddaceab2caab63a5537              935 main/binary-amd64/Packages
+ e1fc72c9c7ba662fe0b279550fbe02e4c99883f30434c3d46d528e9a4090ff47              641 main/binary-amd64/Packages.gz
+ 871d8cc2270f6bc1b98dab485d938936da846a3441e63b31b842b65fc05f96ad              935 main/binary-amd64/Packages
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEDiZ/I8nvmgCTkprjvgsoxV0kOuoFAmp8rwMACgkQvgsoxV0k
-Oup1lA//a/M8RqaYDeHoNM0zu+3kDIwxRhjoQklJrcbz6yN6iF8RcVnZP5C+jvu1
-nORAGVZedeJPkVqJ3E5/IAnRE98EeOxGPRWHNtq/QjgFCWn7kToQy8Old/0/itvv
-keh+N6Nra16uM5PmN+XRm4Xp2tZ97KJra0yO1sMliYqSgJcQ3hetg9h8E8AcLs6I
-18BMEr5CKXaAuWcBeY2gKYegxpfzeLgASUxvpWq3rYimbyiwaP4ILv2HyuyJS2EW
-dftC6fHvWPuaqqtIDP6kg/4xsbt9s8DeHw05od1JmHuoTSzN51qsDIY0YGWuT3Qj
-XKjzzIkOpXHlbCAng4LzEvTLrYZuxXLTrQ+t+NPNGTeiGM3NExmypgo/qfMQ2vCn
-aKjjDny4WjJBkk5hIWgyEeBywfyvfvqeJ1q4PW/6qHKbjYgwKE9AiDAjMhcGjZMc
-rm9iNbF5f6GXicXI/qpwzRmAX61JFhM5vXP3s7IPTO0xMfF4t1kFwZ/mmoYp3Ene
-XHaUxLllsuF1MLvaZQdfOBXMSCnvhcvQLF4EDpSvC4ehxRPu/b64Ppth/7VUsi7X
-7/axFSNpFA4TwBvYrbiz6HbFTS7oCoIw5aOd3n9MdGpkm74jelrV0ZyXu/w/W55p
-srwLYGNgaqqH6gjiWbvRSGNmWn3pmYh5xlBkDW+IKnwuvQyF9W8=
-=H9wt
+iQIzBAEBCgAdFiEEDiZ/I8nvmgCTkprjvgsoxV0kOuoFAmp92l8ACgkQvgsoxV0k
+OupMBw/+OL9ZbBO8pzRGBWIogqfG34J6ZQbw2M3wnaVwlT87crWXs2cABHuY8wuN
+CA11lKKNZbARQxwYyln3mLDP4diu9Cyc3LN3X/N0Ws2Im8hzcFZtMWJOltJi3XUo
+/qNlQ1a+tTLpnPIaO0/Ck5weGrizvadrC4m5B7Kfpyb3lP5id/tb/WghAsVIIRbk
+zgquHagKRYZBbyIIzdIUpXYCYVRvrsKczux4Y6OBWnc+/DmTe3cX7wmpIpkzOx/r
+mVzBY3vOqAMcw3k3I2lqUlLbY1g8aIqrtoSkA6wsw6HYr2nsoBZ9UE1D29F2M+x0
+V/OqTnP8GKnsRZveilgrQgZ5xg60AFErN/ns/dp3lyCj/3eXrXuEMgp+Il7HEkf9
+Fo2tXbpfhnRkTFj6XlFifGNQtBDbK4i5WX841PL8dRVC/JfjIa/qF6z5lt3CCqSr
+ZtBgTjAIObvQ0RqmFE4PAICLM6vT53bOb8rWDUe1IDWC+TjsGhyLey4zCYHe28qz
+6MKDcKuDQKzhNnA44nSSYfjNwHRzFjrq55K0rQCdUpYeM2msBMEx/lxV9FC7v/cz
+9g0AqJ7dMI7z+c4ud5D04e6m8tr3MF/r/xsxS3QzdDwpULHwv3eJ8XvHhQlJFBFT
+Kjhu9FBD3GKl8YWermYxhte9klsGPowbSZrBl65Heh02E+CW3Zw=
+=ndf7
 -----END PGP SIGNATURE-----
