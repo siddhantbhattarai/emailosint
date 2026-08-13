@@ -38,6 +38,7 @@ Everything the tool does, by vector:
 - SMTP: RCPT deliverability probe + catch-all detection
 - Classification: disposable / role / free-provider
 - Identity: Gravatar profile + linked accounts, GitHub (public profile email + commit author-email)
+- Google: Gmail/Workspace detection + **public Google Calendar** leak (name, timezone, events — a pattern-of-life signal)
 - Domain: RDAP registration record, Certificate Transparency (crt.sh)
 - Breach membership: Have I Been Pwned *metadata* (~1000 services), when `HIBP_API_KEY` is set
 
